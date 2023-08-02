@@ -25,6 +25,8 @@
 
 ## Ccылка на репозиторий 
 
-- 
+- https://mozhnopozhaluysta.github.io/movies-explorer-api/
 
+## Ccылка на pullrequest 
 
+- https://github.com/mozhnopozhaluysta/movies-explorer-api/pull/1

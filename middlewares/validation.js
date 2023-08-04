@@ -49,10 +49,20 @@ const forgetMovieValidator = celebrate({
   }),
 });
 
+// Валидатор для обновления данных email и name:
+const changeUserProfileValidator = celebrate({
+  body: Joi.object().keys({
+    email: Joi.string().email().min(1).max(30)
+      .required(),
+    name: Joi.string().min(1).max(30).required(),
+  }),
+});
+
 // Экспорт констант валидаторов для дальнейшего использования:
 module.exports = {
   loginValidator,
   createNewUserValidator,
   saveMovieValidator,
   forgetMovieValidator,
+  changeUserProfileValidator,
 };

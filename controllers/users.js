@@ -7,7 +7,7 @@ const NotFoundCodeStatus = require('../errors/NotFoundCodeStatus');
 const ConflictCodeStatus = require('../errors/ConflictCodeStatus');
 const BadRequestCodeStatus = require('../errors/BadRequestCodeStatus');
 
-const { HTTP_CREATED_CODE_STATUS } = require('../errors/ResponseStatus');
+const { HTTP_CREATED_CODE_STATUS } = require('../utils/constants');
 
 const { SECRET_KEY_DEV } = require('../utils/constants');
 

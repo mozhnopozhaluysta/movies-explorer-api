@@ -49,12 +49,17 @@ const forgetMovieValidator = celebrate({
   }),
 });
 
+const getCurrentUserValidator = celebrate({
+  params: Joi.object().keys({
+    userId: Joi.string().hex().length(24),
+  }),
+});
+
 // Валидатор для обновления данных email и name:
 const changeUserProfileValidator = celebrate({
   body: Joi.object().keys({
-    email: Joi.string().email().min(1).max(30)
-      .required(),
-    name: Joi.string().min(1).max(30).required(),
+    name: Joi.string().min(2).max(30).required(),
+    email: Joi.string().email().required(),
   }),
 });
 
@@ -64,5 +69,6 @@ module.exports = {
   createNewUserValidator,
   saveMovieValidator,
   forgetMovieValidator,
+  getCurrentUserValidator,
   changeUserProfileValidator,
 };

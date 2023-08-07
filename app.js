@@ -9,8 +9,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const cors = require('./middlewares/cors');
 const limiter = require('./middlewares/rateLimit');
 const { URL } = require('./utils/constants');
+const { PORT } = require('./utils/constants');
 
-const { PORT = 3000 } = process.env;
 const app = express();
 
 mongoose
